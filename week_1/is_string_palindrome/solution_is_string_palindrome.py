@@ -25,7 +25,7 @@ def is_string_palindrome(word):
     while start <= end:
         # Check if the letter is a valid 
         # alphabet before procedding, if
-        # not adjust the pointera
+        # not adjust the pointer
         if word[start].isalpha() is False:
             start += 1
             continue
@@ -34,8 +34,12 @@ def is_string_palindrome(word):
             end -= 1
             continue
 
+        # If any inequality is found its
+        # not a palindrome
         if word[start] != word[end]:
             return False
+
+        # Adjust pointers
         start += 1
         end -= 1
     return True
